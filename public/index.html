@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contacts App | Home</title>
+		<link rel="stylesheet" href="/css/main.css" />
+	</head>
+	<body class="bg-zinc-900 text-gray-100">
+		<header class="bg-zinc-800 py-5 px-4 md:px-14">
+			<nav class="flex items-center gap-8">
+				<img src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" alt="nodejs icon" class="h-12">
+				<ul class="flex gap-6">
+               <li class="cursor-pointer text-xl"><a href="/">Home</a></li>
+               <li id="new-contact-btn" class="cursor-pointer text-xl"><p>New Contact</p></li>
+            </ul>
+			</nav>
+		</header>
+		
+		<h1 id="h1" class="text-4xl font-bold text-center mt-10">Your Contacts</h1>
+
+		<p id="no-contacts" class="hidden text-center text-gray-400 text-lg mt-14 uppercase">No contacts found!</p>
+
+		<div id="contact-list"
+			class="w-11/12 max-w-7xl px-5 grid sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4 mx-auto mt-12 mb-16">
+		<!-- Contacts -->
+		</div>
+
+		<div
+			id="form-modal" 
+			class="hidden fixed top-0 left-0 w-full h-full bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
+     		<form id="form" class="bg-zinc-800 px-5 pt-2 pb-4 rounded shadow-md w-96">
+				<div class="flex justify-end">
+					<button id="close-form" type="button" class=" text-red-500 font-bold text-2xl">
+                  X
+               </button>
+				</div>
+      		<div class="mb-5">
+      		   <label for="name" class="block text-gray-300 uppercase font-bold">
+      		      Name:
+      		   </label>
+      		   <input
+      		      type="text"
+      		      id="name"
+						name="name"
+      		      placeholder="Contact name"
+      		      class="border-2 w-full mt-2 p-2 rounded-md text-black"
+      		   />
+					<p id="name-error" class="hidden text-red-500 text-sm mt-2">Invalid name</p>
+      		</div>
+      		<div class="mb-5">
+      		   <label for="name" class="block text-gray-300 uppercase font-bold">
+      		      Phone Number:
+      		   </label>
+      		   <input
+      		      type="text"
+      		      id="phone"
+						name="phone"
+      		      placeholder="Phone Number"
+      		      class="border-2 w-full mt-2 p-2 rounded-md text-black"
+      		   />
+					<p id="phone-error" class="hidden text-red-500 text-sm mt-2">Invalid phone number</p>
+      		</div>
+      		<div class="mb-5">
+      		   <label for="email" class="block text-gray-300 uppercase font-bold">
+      		      Email:
+      		   </label>
+      		   <input
+      		      type="text"
+      		      id="email"
+						name="email"
+      		      placeholder="Contact email address"
+      		      class="border-2 w-full mt-2 p-2 rounded-md text-black"
+      		   />
+					<p id="email-error" class="hidden text-red-500 text-sm mt-2">Invalid email</p>
+      		</div>
+				<input
+					type="submit"
+					id="submit" 
+					value="Save Contact"
+					class="bg-green-600 py-2 px-5 w-full rounded uppercase font-semibold cursor-pointer mt-2 end-0"
+				>
+    		</form>
+		</div>
+
+		<script type="module" src="/js/app.js"></script>
+	</body>
+</html>
