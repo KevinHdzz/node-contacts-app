@@ -8,8 +8,8 @@ const app = express()
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-app.use(express.json())
 app.use(morgan('dev'))
+app.use(express.json())
 
 app.use('/api/', contactsRoutes)
 

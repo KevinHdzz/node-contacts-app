@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     * 
     * @param {Object} contact Request body
     */
-   async function createContact(contact) {
+   function createContact(contact) {
       console.log('Create contact function');
 
       const options = {
