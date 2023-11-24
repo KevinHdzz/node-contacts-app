@@ -11,7 +11,9 @@ const router = Router();
 // }))
 
 router.get('/contacts/:id', get)
+
 router.get('/contacts', getAll)
+
 router.post('/contacts', async (req, res, next) => {
    const [rows] = await pool.query('SELECT * FROM contacts')
 
@@ -20,7 +22,9 @@ router.post('/contacts', async (req, res, next) => {
 
    next()
 }, create)
+
 router.put('/contacts/:id', update)
+
 router.delete('/contacts/:id', remove)
 
 export default router
