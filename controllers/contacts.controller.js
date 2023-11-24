@@ -1,4 +1,4 @@
-import pool from '../config/db_connection.js'
+import pool from '../config/database.js'
 
 const get = async (req, res) => {
    try {

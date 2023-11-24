@@ -1,6 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
-import { fileURLToPath} from 'node:url';
+import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import contactsRoutes from './routes/contacts.routes.js';
 

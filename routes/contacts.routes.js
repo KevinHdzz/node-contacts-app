@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { get, getAll, create, update, remove } from '../controllers/contacts.controller.js';
-import pool from '../config/db_connection.js';
+import pool from '../config/database.js';
 
 const router = Router();
 
