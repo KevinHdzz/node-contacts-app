@@ -12,7 +12,14 @@ const router = Router();
 
 router.get('/contacts/:id', get)
 router.get('/contacts', getAll)
-router.post('/contacts', create)
+router.post('/contacts', async (req, res, next) => {
+   const [rows] = await pool.query('SELECT * FROM contacts')
+
+   if (rows.length >= 40)
+      await pool.query('TRUNCATE TABLE contacts')
+
+   next()
+}, create)
 router.put('/contacts/:id', update)
 router.delete('/contacts/:id', remove)
 
