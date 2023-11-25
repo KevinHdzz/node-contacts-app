@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import contactsRoutes from './routes/contacts.routes.js';
+import authRoutes from './routes/auth.routes.js';
 
 const app = express()
 
@@ -12,6 +13,7 @@ app.use(morgan('dev'))
 app.use(express.json())
 
 app.use('/api/', contactsRoutes)
+app.use('/api/auth/', authRoutes)
 
 app.use(express.static(path.join(__dirname, 'public')));
 

@@ -16,6 +16,6 @@ CREATE TABLE contacts (
   name VARCHAR(50) NOT NULL,
   email VARCHAR(50) NOT NULL,
   phone VARCHAR(15) NOT NULL,
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
